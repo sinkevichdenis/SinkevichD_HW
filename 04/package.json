@@ -1,0 +1,13 @@
+{
+  "name": "04",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "browser-sync start -s -f ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
