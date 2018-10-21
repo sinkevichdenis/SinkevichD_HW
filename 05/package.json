@@ -1,0 +1,21 @@
+{
+  "name": "05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rimraf ./temp && concurrently \"npm run pug-build-watch\" \"npm run browser-sync-dev-watch\" ",
+    "build": "rimraf ./dist && pug ./src --out ./dist",
+    "pug-build-watch": "pug ./src --out ./temp -w  --pretty",
+    "browser-sync-dev-watch": "browser-sync start -s -f ./temp --serveStatic ./temp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.0.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^2.6.2"
+  }
+}
