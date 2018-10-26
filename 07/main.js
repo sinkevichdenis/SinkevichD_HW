@@ -34,7 +34,7 @@
 				//проверка на наличие в критериях сортировки типа null
 				if (window.nullArray)
 				{
-					nullArray[nullArray.length] = array[i];
+					nullArray.push(array[i]);
 					checkData = 1;
 				}				
 			}
@@ -45,7 +45,7 @@
 				{
 					if (typeof array[i] === dataPriority[j])
 					{
-						ts[j][ts[j].length] = array[i];
+						ts[j].push(array[i]);
 						checkData = 1;
 						break;
 					}
