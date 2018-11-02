@@ -1,9 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>HomeWork08</title>
+
+	<style>
+		html, body
+		{
+			height: 100%;
+			margin: 0;
+			padding: 0;
+
+			box-sizing: border-box;
+		}
+		body
+		{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		div
+		{
+			display: flex;
+			flex-direction: row;
+
+			height: 50px;
+
+			border-style: solid;
+		}
+		span
+		{
+			position: relative;
+			padding: 10px;
+			min-width: 8px;
+		}
+		.block1
+		{
+			justify-content: space-around;
+			align-items: center;
+		}
+		.block2
+		{
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+		.block3
+		{
+			justify-content: flex-start;
+			align-items: flex-end;
+		}
+		.block4
+		{
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+		.block2 span
+		{
+			padding-top: 0;
+		}
+		.block3 span
+		{
+			padding-bottom: 0;
+		}
+	</style>
 </head>
 <body>
 
+	<div class="block1">
+		<span>001</span>
+		<span>002</span>
+		<span>003</span>
+		<span>004</span>
+		<span>005</span>
+		<span>006</span>
+	</div>
+
+	<div class="block2">
+		<span>001</span>
+		<span>002</span>
+		<span>003</span>
+		<span>004</span>
+		<span>005</span>
+		<span>006</span>
+	</div>
+
+	<div class="block3">
+		<span>001</span>
+		<span>002</span>
+		<span>003</span>
+		<span>004</span>
+		<span>005</span>
+		<span>006</span>
+	</div>
+
+	<div class="block4">
+		<span>001</span>
+		<span>002</span>
+		<span>003</span>
+		<span>004</span>
+		<span>005</span>
+		<span>006</span>
+	</div>
 </body>
 </html>
