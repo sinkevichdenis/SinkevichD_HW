@@ -1,0 +1,55 @@
+div
+{
+	box-sizing: border-box;
+	margin: 5px;
+}
+body
+{
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+
+}
+.header
+{
+	min-height: 100px;
+	width: 200px;
+	background-color: olive; 
+}
+.container
+{
+	margin: 0; 
+	width: 100%;
+
+}
+.sidebar
+{
+	min-width: 20%;
+	height: 100%;
+	background-color: blue; 	
+}
+.content
+{
+	margin: 0; 
+	height: 100%;
+	width: 80%;
+}
+.main-content
+{
+	height: 100px;
+	width: calc(100%-100px);
+	 
+
+	background-color: orange; 	
+}
+.other-content
+{
+	min-height: 100px;
+	background-color: green; 	
+}
+.footer
+{
+	min-height: 100px;
+	background-color: red; 	
+}
+
