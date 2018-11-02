@@ -1,51 +1,51 @@
-div
-{
-	box-sizing: border-box;
-	margin: 5px;
-}
-body
+html, body
 {
 	box-sizing: border-box;
 	height: 100%;
-	width: 100%;
-
+}
+div
+{
+	box-sizing: border-box;
+	text-align: center;
 }
 .header
 {
 	min-height: 100px;
-	width: 200px;
 	background-color: olive; 
 }
 .container
-{
-	margin: 0; 
-	width: 100%;
+{ 
+	margin: 5px 0; 
+	height: calc(100% - 200px);
+
+	display: flex;
+	flex-direction: row;
 
 }
 .sidebar
 {
-	min-width: 20%;
-	height: 100%;
-	background-color: blue; 	
+	min-width: 100px;
+	background-color: blue; 
 }
 .content
-{
-	margin: 0; 
+{ 
+	margin-left: 5px;
 	height: 100%;
-	width: 80%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
 }
 .main-content
 {
-	height: 100px;
-	width: calc(100%-100px);
-	 
-
-	background-color: orange; 	
+	height: calc(100% - 105px);
+	background-color: orange;
 }
 .other-content
 {
+	margin-top: 5px;
 	min-height: 100px;
-	background-color: green; 	
+	background-color: green; 
 }
 .footer
 {
