@@ -1,12 +1,13 @@
 html, body
 {
-	box-sizing: border-box;
 	height: 100%;
+	box-sizing: border-box;
 }
 div
 {
-	box-sizing: border-box;
 	text-align: center;
+	vertical-align: middle;
+	box-sizing: border-box;
 }
 .header
 {
@@ -17,47 +18,48 @@ div
 { 
 	margin: 5px 0; 
 	height: calc(100% - 200px);
-
-	display: flex;
-	flex-direction: row;
-
 }
 .sidebar
 {
+	margin-right: 5px; 
 	min-width: 100px;
+	height: 100%;
+	float: left; 
 	background-color: blue; 
+	display: inline-block; 
 }
 .content
-{ 
-	margin-left: 5px;
+{  
 	height: 100%;
-	width: 100%;
-
-	display: flex;
-	flex-direction: column;
-
+	width: calc(100% - 105px);
+	float: left; 
+	display: inline-block; 
 }
 .main-content
-{
+{ 	
+	margin-bottom: 5px;
 	height: calc(100% - 105px);
-	background-color: orange;
 	width: 100%;
-	display: table;
+	float: top;
+	background-color: orange;
+	display: inline-block; 
 }
 .other-content
 {
-	margin-top: 5px;
 	min-height: 100px;
+	width: 100%;
+	float: top;
 	background-color: green; 
+	display: inline-block; 
 }
 .footer
 {
+	margin-top: 5px;
 	min-height: 100px;
 	background-color: red; 	
 }
-span
+/*span
 {
 display: table-cell;
 vertical-align: middle;
-}
-
+}*/

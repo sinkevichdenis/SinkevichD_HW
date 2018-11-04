@@ -1,7 +1,6 @@
 {
   "name": "09",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "browser-sync start -s -f ./"
@@ -12,5 +11,6 @@
   "dependencies": {
     "browser-sync": "^2.26.3",
     "reset-css": "^4.0.1"
-  }
+  },
+  "description": ""
 }
