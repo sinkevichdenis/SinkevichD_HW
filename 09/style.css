@@ -35,11 +35,14 @@ div
 
 	display: flex;
 	flex-direction: column;
+
 }
 .main-content
 {
 	height: calc(100% - 105px);
 	background-color: orange;
+	width: 100%;
+	display: table;
 }
 .other-content
 {
@@ -51,5 +54,10 @@ div
 {
 	min-height: 100px;
 	background-color: red; 	
+}
+span
+{
+display: table-cell;
+vertical-align: middle;
 }
 
