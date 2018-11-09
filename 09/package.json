@@ -1,5 +1,5 @@
 {
-  "name": "08",
+  "name": "09",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,4 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "reset-css": "^4.0.1"
+  },
+  "description": ""
+}
