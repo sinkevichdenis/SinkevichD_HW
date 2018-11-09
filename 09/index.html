@@ -16,6 +16,62 @@
 		<div class="content">
 			<div class="main-content">
 				<span>Main content</span>
+				<div class="input-form">
+					<div class="input-row">
+						<label for="input-log">Login:</label>		
+						<input id="input-log" 
+								type="text" 
+								placeholder="Enter login">
+					</div>
+					<div class="input-row">
+						<label for="input-pass">Password:</label>	
+						<input id="input-pass" 
+								type="password" 
+								placeholder="Enter password">
+					</div>
+					<div class="input-row">
+						<label for="input-mail">E-mail:</label>	
+						<input id="input-mail" 
+								type="email" 
+								placeholder="Enter e-mail">
+					</div>
+					<div class="input-row">
+						<label for="input-check">Some Checkbox</label>
+						<div class="checkbox">
+							<input id="input-check" 
+									type="Checkbox"
+									checked>
+							<label for="input-check"></label>
+						</div>
+					</div>
+					<div class="input-row">
+						<div class="radio">
+							<label for="rad-year">Year</label>
+							<input id="rad-year" 
+									type="radio"
+									name="radio-name" 
+									checked>
+							<label class="radio-label" 
+									for="rad-year"></label>
+						</div>
+						<div class="radio">
+							<label for="rad-month">Month</label>
+							<input id="rad-month" 
+									name="radio-name"
+									type="radio">
+							<label class="radio-label" 
+									for="rad-month"></label>
+						</div>
+						<div class="radio">
+							<label for="rad-day">Day</label>
+							<input id="rad-day" 
+									name="radio-name"
+									type="radio">
+							<label class="radio-label" 
+									for="rad-day"></label>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="other-content">
 				<span>Other content</span>
@@ -27,9 +83,4 @@
 	</div>
 </body>
 </html>
-<!-- 
-1) Написать стили в style.css для index.html по макетам layout-big-size.png и layout-small-size.png. Размер блоков должны быть адаптивными по размеру окна.
 
-Статические размеры для блоков 100px. Отступы для блоков 5px.
-
-2) Сверстать кастомные чекбокс внутри .main-content блока. Стиль - ваша фантазия. Чекбокс должен иметь стили для двух состояний и для анимации навидения курсора на него. -->

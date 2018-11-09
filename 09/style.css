@@ -1,65 +1,151 @@
 html, body
 {
-	height: 100%;
 	box-sizing: border-box;
+	height: 100%;
 }
 div
 {
-	text-align: center;
-	vertical-align: middle;
 	box-sizing: border-box;
+	text-align: center;
 }
 .header
 {
-	min-height: 100px;
 	background-color: olive; 
+	
+	min-height: 100px;
 }
 .container
 { 
-	margin: 5px 0; 
 	height: calc(100% - 200px);
+	margin: 5px 0; 
 }
-.sidebar
+.container .sidebar
 {
-	margin-right: 5px; 
-	min-width: 100px;
-	height: 100%;
+	display: inline-block; 
 	float: left; 
 	background-color: blue; 
-	display: inline-block; 
-}
-.content
-{  
+	
+	min-width: 100px;
 	height: 100%;
-	width: calc(100% - 105px);
-	float: left; 
-	display: inline-block; 
+	
+	margin-right: 5px; 
 }
-.main-content
+.container .content
+{  
+	display: inline-block; 
+	
+	height: 100%;
+	width: calc(100% - 105px); 
+}
+.content .main-content
 { 	
-	margin-bottom: 5px;
-	height: calc(100% - 105px);
-	width: 100%;
+	display: inline-block; 
 	float: top;
 	background-color: orange;
-	display: inline-block; 
+
+	height: calc(100% - 105px);
+	width: 100%;
+	
+	margin-bottom: 5px;
 }
-.other-content
+.content .other-content
 {
+	display: inline-block; 
+	background-color: green; 
+
 	min-height: 100px;
 	width: 100%;
-	float: top;
-	background-color: green; 
-	display: inline-block; 
 }
 .footer
 {
+	background-color: red;
+
 	margin-top: 5px;
 	min-height: 100px;
-	background-color: red; 	
 }
+.main-content .input-form
+{
+	max-width: 300px;
+	min-width: 220px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.input-form .input-row
+{
+	display: flex;
+	justify-content: space-between;
+
+	margin: 5px 0;
+}
+.input-row label
+{
+	vertical-align: middle;
+
+	font-size: 12pt;
+	font-weight: bold;
+	color: maroon;
+}
+.checkbox label, .radio .radio-label
+{
+	display: inline-block;
+
+	width: 14px;
+	height: 14px;
+	border: 2px solid #7a7a7a;
+}
+.radio .radio-label
+{
+	border-radius: 50%;
+}
+.checkbox input, .radio input
+{
+	display: none;
+}
+.checkbox label::after, .radio .radio-label::after
+{
+	content: " ";
+	display: none;
+	position: relative;
+	left: 2px;
+	top: 2px;
+
+	width: 10px;
+	height: 10px;
+	background-color: black;
+}
+.radio .radio-label::after
+{
+	border-radius: 50%;
+}
+
+.checkbox input:checked ~ label::after, 
+.radio input:checked ~ .radio-label::after
+{
+	display: block;
+}
+
+.input-row:hover>.checkbox input:not(:checked) ~ label::after, 
+.radio:hover input:not(:checked) ~ .radio-label::after
+{
+	display: block;
+	background-color: #7a7a7a;
+}
+
+
+
+
+
+
+
+
 /*span
 {
 display: table-cell;
 vertical-align: middle;
 }*/
+
+
+
+
+
+
