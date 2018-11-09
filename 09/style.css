@@ -3,17 +3,10 @@ html, body
 	box-sizing: border-box;
 	height: 100%;
 }
-.vert-outer
+div
 {
-	position: relative;
-}
-.vert-inner
-{
-	position: absolute;
+	box-sizing: border-box;
 	text-align: center;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
 }
 .header
 {
@@ -47,6 +40,7 @@ html, body
 .content .main-content
 { 	
 	display: inline-block; 
+	float: top;
 	background-color: orange;
 
 	height: calc(100% - 105px);
@@ -73,6 +67,8 @@ html, body
 {
 	max-width: 300px;
 	min-width: 220px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .input-form .input-row
 {
@@ -134,5 +130,22 @@ html, body
 	display: block;
 	background-color: #7a7a7a;
 }
+
+
+
+
+
+
+
+
+/*span
+{
+display: table-cell;
+vertical-align: middle;
+}*/
+
+
+
+
 
 
