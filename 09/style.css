@@ -3,14 +3,20 @@ html, body
 	box-sizing: border-box;
 	height: 100%;
 }
-div
+.vert-outer
 {
-	box-sizing: border-box;
+	position: relative;
+}
+.vert-inner
+{
+	position: absolute;
 	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 .header
 {
-
 	background-color: olive; 
 	
 	min-height: 100px;
@@ -41,7 +47,6 @@ div
 .content .main-content
 { 	
 	display: inline-block; 
-	float: top;
 	background-color: orange;
 
 	height: calc(100% - 105px);
@@ -68,8 +73,6 @@ div
 {
 	max-width: 300px;
 	min-width: 220px;
-	margin-right: auto;
-	margin-left: auto;
 }
 .input-form .input-row
 {
