@@ -6,6 +6,7 @@ body
 {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin-left:auto;
 	margin-right: auto;
 
@@ -24,24 +25,23 @@ body
 	border-radius: 30%;
 	border: 2px solid grey;
 }
-.slide
+.slides .slide
 {
 	border-radius: 30%;
 }
-.button-container
+.stop-container, .start-container
 {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+
+	width: 450px;
 
 	font-weight: bold;
 	margin: 20px 0;
 }
 .attention
 {
-	display: none;
-		
-	text-align:center;
 	font-size: 2em;
 }
 .button
@@ -50,7 +50,12 @@ body
 	height: 75px;
 
 	font-weight: inherit;
+	font-size: 2em;
 
 	border-radius: 50%;
 	border: 2px solid grey;
+}
+.container > .start-container
+{
+	display: none;
 }

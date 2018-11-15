@@ -1,12 +1,14 @@
-(function ()
+document.querySelectorAll(".slides").forEach(function (element)
 {
+	var slideSize = element.clientWidth,
+		currentPosition = 0,
+		indexInterval;
 
-	document.querySelectorAll(".slides").forEach(function (element)
+	function startSlider()
+	/*если сделать функцию самовызывающейся, то мы не сможем 
+	потом к ней повторно обратится*/
 	{
-		var slideSize = element.clientWidth,
-			currentPosition = 0;
-	
-		setInterval(function()
+		indexInterval = setInterval(function()
 		{
 			currentPosition += slideSize;
 		
@@ -15,12 +17,27 @@
 				currentPosition = 0;
 			}
 
-			element.scroll({left: currentPosition, behavior: "smooth"});
-		}, 2000);
+			element.scroll({left: currentPosition, behavior: "smooth" });
+		}, 1000);
+	}	
 
-	})
+	startSlider();	
+	document.querySelector(".start-button").onclick = function ()
+	{
+		startSlider();
+		document.querySelector(".start-container").style.setProperty("display","none");
+		document.querySelector(".stop-container").style.setProperty("display","flex");
+	};
 
-})();
+	document.querySelector(".stop-button").onclick = function ()
+	{
+		clearInterval(indexInterval);
+		document.querySelector(".start-container").style.setProperty("display","flex");
+		document.querySelector(".stop-container").style.setProperty("display","none");
+	};
+
+})
+
 
 
 
