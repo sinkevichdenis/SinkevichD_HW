@@ -1,0 +1,23 @@
+html, body 
+{
+    height: 100%;
+}
+div.col-3
+{
+    background-color: marine;
+}
+div.content
+{
+    background-color: blue;
+    height: 300px;
+}
+.row.header, .row.footer
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+.header, .footer
+{
+    height: 100px;
+    background-color: pink;
+}
