@@ -11,14 +11,13 @@ document.querySelectorAll(".slides").forEach(function (element)
 		indexInterval = setInterval(function()
 		{
 			currentPosition += slideSize;
-		
 			if (currentPosition >= element.scrollWidth) 
 			{
 				currentPosition = 0;
+				element.scroll({left: currentPosition, behavior: "auto"});
 			}
-
 			element.scroll({left: currentPosition, behavior: "smooth" });
-		}, 1000);
+		}, 500);
 	}	
 
 	startSlider();	
