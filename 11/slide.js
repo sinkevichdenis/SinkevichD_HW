@@ -13,11 +13,11 @@ document.querySelectorAll(".slides").forEach(function (element)
 			currentPosition += slideSize;
 			if (currentPosition >= element.scrollWidth) 
 			{
-				currentPosition = 0;
-				element.scroll({left: currentPosition, behavior: "auto"});
+				currentPosition = slideSize;
+				element.scroll({left: 0, behavior: "auto"});
 			}
 			element.scroll({left: currentPosition, behavior: "smooth" });
-		}, 500);
+		}, 1000);
 	}	
 
 	startSlider();	
