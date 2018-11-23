@@ -1,0 +1,35 @@
+mixin navA()
+	each index in navItems
+		a.nav-item.nav-link(href="" + index.href)= index.name
+
+
+mixin createNavLinks(navItems,pages)
+	div.col-3
+		nav
+			+navUl(navItems)
+			+navUl(pages)
+
+mixin navUl(type)
+	if(type === pages)
+		ul.nav.flex-column.pl-3 Pages
+			+navLi(type)
+	else
+		ul.nav.flex-column
+			+navLi(type)
+
+mixin navLi(arrayName)
+	each index in arrayName	
+		li.nav-item
+			a.nav-link(href="" + index.href)= index.name
+
+mixin linkPages(arrayName)
+	each index in arrayName
+		div.col.mt-2
+			h2.col= "Page" +index.id
+			div.col= index.previewContent
+				a.badge(href="" + index.href)= index.fullContent
+
+mixin createContent(page)
+	div.col
+		h2.col= page.name
+		div.col= page.fullContent
