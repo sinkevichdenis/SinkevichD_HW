@@ -1,0 +1,36 @@
+{
+    "header": {
+        "logo": "HW 13"
+    },
+    "navItems": [{
+        "name": "Home",
+        "id": "home",
+        "href": "/"
+    }, {
+        "name": "Other",
+        "id": "other",
+        "href": "/other.html"
+    }],
+    "pages": [{
+        "name": "Page 1",
+        "id": 1,
+        "previewContent": "Content for Page 1",
+        "fullContent": "Content for Page 1 Text"
+    }, {
+        "name": "Page 2",
+        "id": 2,
+        "previewContent": "Content for Page 2",
+        "fullContent": "Content for Page 2 Text"
+    }, {
+        "name": "Page 3",
+        "id": 3,
+        "previewContent": "Content for Page 3",
+        "fullContent": "Content for Page 3 Text"
+    }],
+    "otherPage": {
+        "name": "Page Other",
+        "previewContent": "Content for Page Other",
+        "fullContent": "Content for Page Other Text"
+    },
+    "currentNavItemId": null
+}

@@ -1,0 +1,16 @@
+mixin navA()
+	each index in navItems
+		a.nav-item.nav-link(href="" + index.href)= index.name
+
+mixin navLi(arrayName)
+	each index in arrayName	
+		li.nav-item
+			a.nav-link(href="" + index.href)= index.name
+
+mixin navUl(type)
+	if(type === pages)
+		ul.nav.flex-column.pl-3
+			+navLi(type)
+	else
+		ul.nav.flex-column
+			+navLi(type)
