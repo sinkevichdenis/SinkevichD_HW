@@ -14,16 +14,19 @@
     "pages": [{
         "name": "Page 1",
         "id": 1,
+        "href": "/page/1.html",
         "previewContent": "Content for Page 1",
         "fullContent": "Content for Page 1 Text"
     }, {
         "name": "Page 2",
         "id": 2,
+        "href": "/page/2.html",
         "previewContent": "Content for Page 2",
         "fullContent": "Content for Page 2 Text"
     }, {
         "name": "Page 3",
         "id": 3,
+        "href": "/page/3.html",
         "previewContent": "Content for Page 3",
         "fullContent": "Content for Page 3 Text"
     }],
