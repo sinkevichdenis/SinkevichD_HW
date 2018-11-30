@@ -5,10 +5,16 @@
 	{
 		var numberElem = element.querySelectorAll('.menu-link').length-1,
 			myClass = "menu-direction__opened",
-			heightMainLink = parseInt(getComputedStyle(element.querySelector(".menu-title-link")).height),
-			heightOtherLink = parseInt(getComputedStyle(element.querySelector(".link-size")).height);
+			heightMainLink = getHeight(".menu-title-link"),
+			heightOtherLink = getHeight(".link-size");
 
-
+		function getHeight(elemClass)
+		{ //получает значение высоты в данном классе
+			var heightElement;
+			heightElement = element.querySelector(elemClass);
+			heightElement = parseInt(getComputedStyle(heightElement).height);
+			return heightElement;
+		}
 
 		element.onmouseover = function ()
 		{
