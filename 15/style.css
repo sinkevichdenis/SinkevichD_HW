@@ -1,0 +1,98 @@
+body
+{
+	background-image: url(./images/morocco/morocco/morocco.png); 
+	padding: 50px;
+}
+.menu
+{
+	padding: 0;
+	margin: 0;
+	width: 50px;
+
+	list-style: none;
+	font-size: 14pt;
+
+	opacity: .5;
+	transition: opacity 0.3s ease-in-out;
+}
+.menu:hover
+{
+	opacity: 1;
+}
+.menu-direction__closed
+{
+	width: 50px;
+	height: 50px;
+	
+	overflow: hidden;
+	transition: background .5s ease-in-out,
+				width .2s ease-in-out, 
+				height 0.2s ease-in-out 0.2s;
+}
+.menu-direction__opened
+{
+	width: 200px;
+	
+	transition: width .2s ease-in-out, 
+				height 0.2s ease-in-out 0.2s;
+}
+.menu-link
+{
+	display: block;
+	padding-left: 10px;
+	
+	background-color: gray;
+
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+
+
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+
+	cursor: pointer;
+}
+.menu-link:hover
+{
+	background-color: blue;
+	transition: background-color 0.3s;
+}
+.menu-link.menu-title-link
+{
+	position: relative; 
+
+	font-size: 1.2em;
+	text-indent: 40px;
+
+	height: 50px;
+	line-height: 50px;
+}
+.menu-link.menu-title-link::before
+{
+	content: " ";
+
+	display: block;
+	position: absolute;
+
+	width: 50px;
+	height: 50px;
+	left: 0;
+}
+.menu-main .menu-link.menu-title-link::before
+{
+	background: url(./images/home.png) center no-repeat; 
+}
+.menu-settings .menu-link.menu-title-link::before
+{
+	background: url(./images/settings.png) center no-repeat; 
+}
+.menu-links .menu-link.menu-title-link::before
+{
+	background: url(./images/link.png) center no-repeat; 
+}
+.menu-search .menu-link.menu-title-link::before
+{
+	background: url(./images/search.png) center no-repeat; 
+}
