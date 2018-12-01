@@ -1,0 +1,24 @@
+@import "./var.sass"
+@import "./mixin.sass"
+
+.radio
+	@include margin(0,0,0,20px)
+	@include сolor($secondColor)
+	&_clear
+		@include сolor($firstColor)
+		.voxy-radio__box
+			@include сolor($firstColor,border)
+	&_question
+		@include margin(0,0,1.5em)
+		@include сolor($firstColor)
+		@include font(24,b)
+	&_options
+		display: flex
+		flex-direction: column
+		&-item
+			@include margin(0,0,2em)
+			@include font(19)
+			align-items: flex-start
+			&__selected &-text
+				@include сolor($firstColor)
+				@include font(0,b)
