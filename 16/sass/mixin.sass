@@ -7,9 +7,10 @@
 @mixin font($size,$type1:null,$type2:null)
 	@if $size != 0
 		font-size: #{$size}px
-	@if $type1 or $type2 == b
+	
+	@if $type1 == b or $type2 == b
 		font-weight: bold
-	@if $type1 or $type2 == i
+	@if $type1 == i or $type2 == i
 		font-style: italic
 
 @mixin margin($tp,$rt:null,$bm:null,$lt:null)
@@ -20,10 +21,10 @@
 
 @mixin marginAdd($tp,$rt,$bm,$lt)
 	@if $tp != 0
-		margin-top: #{$tp}
+		margin-top: $tp
 	@if $rt != 0	
-		margin-right: #{$rt}
+		margin-right: $rt
 	@if $bm != 0	
-		margin-bottom: #{$bm}
+		margin-bottom: $bm
 	@if $lt != 0	
-		margin-left: #{$lt}
+		margin-left: $lt
