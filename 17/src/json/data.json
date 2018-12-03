@@ -1,0 +1,24 @@
+{
+    "menu": {
+        "disabled": false,
+        "currentItemIndex": -1,
+        "items": [
+            {
+                "text": "some text",
+                "disabled": true
+            },
+            {
+                "text": "other text",
+                "disabled": false
+            },
+            {
+                "text": "some text 1",
+                "disabled": true
+            },
+            {
+                "text": "other text 2",
+                "disabled": false
+            }
+        ]
+    }
+}
