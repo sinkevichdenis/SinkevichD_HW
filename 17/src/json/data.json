@@ -1,23 +1,19 @@
 {
     "menu": {
-        "disabled": false,
-        "currentItemIndex": -1,
         "items": [
             {
-                "text": "some text",
-                "disabled": true
+                "name": ["menu", "products", "store", "forum"],
+                "color": ["white","green"]
             },
             {
-                "text": "other text",
-                "disabled": false
+                "name": ["settings", "parameter 2", 
+                        "parameter 2", "parameter 3", "parameter 4"]
             },
             {
-                "text": "some text 1",
-                "disabled": true
+                "name": ["links", "link"]
             },
             {
-                "text": "other text 2",
-                "disabled": false
+                "name": ["search", "shop search", "forum search"]
             }
         ]
     }

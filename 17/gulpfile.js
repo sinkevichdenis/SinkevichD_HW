@@ -55,6 +55,14 @@ gulp.task('browser:run:temp', function (done) {
             {
                 route: '/libs/jquery',
                 dir: './node_modules/jquery/dist/'
+            },
+            {
+                route: '/libs/js',
+                dir: './src/js/'
+            },
+             {
+                route: '/libs/images',
+                dir: './src/images/'
             }
         ]
     });
@@ -70,11 +78,11 @@ gulp.task('browser:reload', function (done) {
 
 gulp.task('build', gulp.series('clien:dist', 'compile-pug:dist', 'compile-sass:dist'));
 
-gulp.task('dev:comppile', gulp.parallel('compile-pug:temp', 'compile-sass:temp'));
+gulp.task('dev:compile', gulp.parallel('compile-pug:temp', 'compile-sass:temp'));
 
-gulp.task('dev', gulp.series('clien:temp', 'dev:comppile', 'browser:run:temp', function watch() {
+gulp.task('dev', gulp.series('clien:temp', 'dev:compile', 'browser:run:temp', function watch() {
     gulp.watch(sassPrivatePaths, gulp.series('compile-sass:temp', 'browser:reload'));
-    return gulp.watch(['src/**/*.pug', './src/json/data.json'], gulp.series('compile-pug:temp', 'browser:reload'));
+    return gulp.watch(['src/pug/**/*.pug', './src/json/data.json'], gulp.series('compile-pug:temp', 'browser:reload'));
 }));
 
 function compilePug(dest, option) {

@@ -1,0 +1,10 @@
+mixin createList(array)
+	for item in array
+		li(class= "menu-"+ item.name[0]).menu-direction__closed
+			+createA(item.name)
+
+mixin createA(array)
+	for name,index in array
+		a.menu-link(href="" + "#" 
+					class=(index === 0 ? "menu-link-title" : 
+					(index === 1 ? "link-size" : ""))) #{name}

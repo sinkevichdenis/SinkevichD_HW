@@ -1,24 +1,73 @@
 @import "var"
 @import "mixin"
 
-.radio
-	@include margin(0,0,0,20px)
-	@include сolor($secondColor)
-	&_clear
-		@include сolor($firstColor)
-		.voxy-radio__box
-			@include сolor($firstColor,border)
-	&_question
-		@include margin(0,0,1.5em)
-		@include сolor($firstColor)
-		@include font(24,b)
-	&_options
-		display: flex
-		flex-direction: column
-		&-item
-			@include margin(0,0,2em)
-			@include font(19)
-			align-items: flex-start
-			&__selected &-text
-				@include сolor($firstColor)
-				@include font(0,b)
+
+body
+	background-image: url($backImage)
+	padding: 50px
+
+.menu
+	$this: &
+	padding: 0
+	margin: 0
+	width: 40px
+	list-style-type: none
+	font-size: $fontSize
+	opacity: .5
+	transition: opacity 0.3s $AS
+
+	&:hover
+		opacity: 1
+
+	&-direction__
+		&closed
+			width: $iconSizeWidth
+			height: $iconSizeHeight
+			overflow: hidden
+			transition: background .5s $AS, 
+			width .2s $AS, 
+			height .2s $AS .2s
+		&opened
+			width: $linkWidth
+			transition:	width .2s $AS, 
+			height .2s $AS .2s
+
+	&-link
+		display: block
+		padding-left: 10px
+		@include color($backColor, "background") 
+		width: $linkWidth
+		height: $linkHeigth
+		line-height: $linkHeigth
+		text-transform: uppercase
+		text-decoration: none
+		@include color($fontColor)
+		cursor: pointer
+
+		&:hover
+			@include color($backColorActive,"background")
+			transition: background .3s $AS
+
+		&#{&}-title
+			position: relative
+			font-size: 1.2em
+			text-indent: 40px
+			height: $iconSizeHeight
+			line-height: $iconSizeHeight
+
+			&::before
+				content: " "
+				display: block
+				position: absolute
+				width: $iconSizeWidth
+				height: $iconSizeHeight
+				left: 0
+
+				#{$this}-menu &
+					background: url($iconMenu) center no-repeat
+				#{$this}-settings &
+					background: url($iconSetting) center no-repeat
+				#{$this}-links &
+					background: url($iconLinks) center no-repeat
+				#{$this}-search &
+					background: url($iconSearch) center no-repeat;
