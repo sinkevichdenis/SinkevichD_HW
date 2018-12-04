@@ -1,0 +1,32 @@
+@mixin color($color,$type:null)
+	@if $type
+		#{$type}-color: $color
+	@else 
+		color: $color
+
+@mixin font($size,$type1:null,$type2:null)
+	@if $size != 0
+		font-size: #{$size}px
+	
+	@if $type1 == b or $type2 == b
+		font-weight: bold
+	@if $type1 == i or $type2 == i
+		font-style: italic
+
+@mixin margin($tp,$rt:null,$bm:null,$lt:null)
+	@if $tp == del
+		margin: 0
+	@else 
+		@include marginAdd($tp,$rt,$bm,$lt)
+
+@mixin marginAdd($tp,$rt,$bm,$lt)
+	@if $tp != 0
+		margin-top: $tp
+	@if $rt != 0	
+		margin-right: $rt
+	@if $bm != 0	
+		margin-bottom: $bm
+	@if $lt != 0	
+		margin-left: $lt
+
+
