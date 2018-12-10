@@ -1,0 +1,71 @@
+$heightMenu: 70px
+$colorMenuLinks: white
+$headerBackColor: #0f6f0f
+$sizeButton: 50px
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	background-color: $headerBackColor
+	height: $heightMenu
+
+	font-size: 16pt
+
+	&-logo img
+		height: $heightMenu
+		margin-left: 10px
+
+	&-links
+		&__current
+			display: flex
+			justify-content: space-around
+
+			width: 100%
+			text-transform: uppercase
+			
+		&__fromButton
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: absolute
+			
+			width: 150px
+			top: $heightMenu
+			left: calc(100% - 150px)
+			background-color: #0f6f0f
+
+	&-link
+		color: $colorMenuLinks
+		text-decoration: none
+
+		&:hover
+			color: yellow
+			transition: color 0.1s
+
+	&-button
+		display: none
+		width: $sizeButton
+		height: $sizeButton
+		text-align: center
+
+		background-color: $bodyBackColor
+		margin-right: 10px
+
+		border: 1px solid black
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+		
+		a
+			font-size: $sizeButton
+			line-height:  $sizeButton
+			color: black
+
+	@media (max-width: 600px)
+		&-links__current
+			display: none
+		&-links__fromButton
+			display: flex
+		&-button
+			display: block
+	
