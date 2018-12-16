@@ -1,0 +1,12 @@
+mixin dropdown(name, ...items)
+
+	.dropdown
+		.dropdown_button= name 
+		.dropdown_links.block-flex__closed
+			each item,index in items
+				if (index == 0)
+					a(href= "#").link-size&attributes(attributes)= item 
+				else
+					a(href= "#")&attributes(attributes)= item 
+	script(src="/js/component/_dropdown.js")
+

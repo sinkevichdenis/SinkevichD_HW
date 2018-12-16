@@ -1,4 +1,6 @@
 extend ./_template.pug
+include ./component/_dropdown.pug
 
 block navbar
 	include ./component/_header.pug
+	+dropdown("Click me!", "Name", "Age", "Place")(class= "dropdown_link" )
